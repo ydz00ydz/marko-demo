@@ -1,0 +1,246 @@
+
+
+$ const adData = [
+    {"icon":"https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=4086660797,2843801523&fm=179&app=35&f=PNG?w=54&h=54&s=2FB5C24EB7DB047116DFDEA703003005",
+    "title":"Affordable Protection Plans",
+    "desc":"For as litle as $18/mo,well pay for repairs after your manutacturer's warranty expire"},
+    {"icon":"https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=4086660797,2843801523&fm=179&app=35&f=PNG?w=54&h=54&s=2FB5C24EB7DB047116DFDEA703003005",
+    "title":"100%of covered repair costs",
+    "desc":"Covers everything from your steering and transmission,down to the fancy tech inside your touchscreen.All you pay is a $50 deductible.Repair Anywhere"},
+    {"icon":"https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=4086660797,2843801523&fm=179&app=35&f=PNG?w=54&h=54&s=2FB5C24EB7DB047116DFDEA703003005",
+    "title":"Repair Anywhere",
+    "desc":"You choose your mechanic,and we pay them directy for repairs,so you aren't stuck chasing down reimbursements."}
+    ];
+
+style {
+
+    body,div,p,span{
+        margin:0;
+        padding:0;
+    }
+    html,body{
+      background:#FFFFFF;
+    }
+    .container {
+        width:100%;
+        display:flex;
+        flex-direction:column;
+    }
+
+    .top{
+        width:100%;
+        position: relative;
+        overflow: hidden;
+
+        img{
+            height:240px;
+            width: 100%;
+            object-fit: cover; 
+            object-position: right bottom;
+        }
+    }
+
+    .bottom{
+        display:flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .left{
+        display:flex;
+        flex-direction:column;
+        flex: 1 0 0; 
+
+        .ad-header{
+            background-color:#0133a0;
+            text-align:center;
+            padding:20px 0;
+
+            .title{
+                color:#7acbeb;
+                font-size:1.6rem;
+                line-height:3rem;
+            }
+            .desc{
+                color:#f2f4f9;
+                font-size:1.2rem;
+                line-height:2rem;
+            }
+        }
+
+        .ad-item{
+            height: 100px;
+            margin: 20px 0;
+            display:flex;
+            flex-direction:row;
+            justyfiy-content:center;
+            align-items:center;
+            
+            .ad-item-left{
+                margin:auto 10px;
+                .ad-icon{
+                    max-width:50px;
+                    height:100%;
+                }
+            }
+            
+            
+            .ad-item-right{
+                height:100%;
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+
+                .ad-item-title{
+                    color:#000;
+                    font-size:1.4rem;
+                    font-weight:700;
+                }
+
+                .ad-item-desc{
+                    color:#666;
+                    font-size:1rem;
+                    font-weight:400;
+                }
+            }
+        }
+    }
+    
+    .right{
+        display:flex;
+        flex-direction:column;
+        flex: 1 0 0; 
+        padding:20px;
+        background-color:#0d1940;
+        color:#fff;
+
+        .form-title{
+            font-size:2rem;
+            font-weight:400;
+            margin: 0 20px;
+        }
+
+        .form-line{
+            display:flex; 
+            justify-content:space-between;
+        }
+
+        .form-item{
+            flex: 1 0 0; 
+            margin: 10px 20px;
+            input{
+                width:100%;
+                border-radius:5px;
+                height:1.2rem;
+            }
+
+            .cbx {
+                width: 20px;
+            }
+            
+        }
+        
+        .form-submit{
+            display:flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items:center;
+            height: 80px;
+
+            .btn-submit{
+                height:50px;
+                width:180px;
+                border-radius: 20px;
+                background-color: #ed7766;
+                color: #FFF;
+                font-size: 1.2rem;
+                font-weight: 700;
+                
+            }
+        }
+        
+    }
+
+    @media screen and (max-width: 768px) {
+      .top F{
+        img {
+            height:180px;
+        }
+      }
+      .bottom {
+          display:flex;
+          flex-direction:column;
+      }
+
+      .left, .right {
+        width: 100%; 
+      }
+    }
+}
+
+
+<div.container>
+    <div.top>
+        <img src="./banner.png"/>
+    </div>
+    <div.bottom>
+        <div.left>
+            <div.ad-header>
+                <p.title>Allstate Extended Vehicle Care</p>
+                <p.desc>Protect your vehicle from unexpected repair costs</p>
+            </div>
+            <div.ad-list>
+                <for|item| of=adData>
+                    <div.ad-item>
+                        <div.ad-item-left>
+                            <img.ad-icon src=item.icon/>
+                        </div>
+                        <div.ad-item-right>
+                            <p.ad-item-title>${item.title}</p>
+                            <p.ad-item-desc>${item.desc}</p>
+                        </div>
+                    </div>
+                </for>
+            </div>
+        </div>
+        <div.right>
+            <div.form-title>Get A Free Quote</div>
+            <div.form-line>
+                <div.form-item>
+                    <p>First Name</p>
+                    <input type="text" key="firstName" placeholder="First Name">
+                </div>
+                <div.form-item>
+                    <p>Last Name</p>
+                    <input type="text" key="lastName" placeholder="Last Name">
+                </div>
+            </div>
+            <div.form-item>
+                <p>First Name</p>
+                <input type="text" key="firstName" placeholder="First Name">
+            </div>
+            <div.form-item>
+                <label>
+                    <input.cbx type="checkbox"/> My vehide's model year is 2017 or newer
+                </label>
+            </div>
+            <div.form-item>
+                <label>
+                    <input.cbx type="checkbox"/> My vehidle has leas than 80,000 miles
+                </label>
+            </div>
+            <div.form-item>
+                <label>
+                    <input.cbx type="checkbox"/> I do not live in either Califomia or Massachusetts
+                </label>
+            </div>
+            <div.form-item>
+                By clicking submit you would ....
+            </div>
+            <div.form-submit>
+                <input.btn-submit type="submit" value="Submit">
+            </div>
+        </div>
+    </div>
+</div>
